@@ -24,7 +24,7 @@ def gradient_descent(g,w,a_train,s_train,alpha,max_its,verbose):
     grad = value_and_grad(g_flat)
 
     # record history
-    num_val = y_val.size
+    # num_val = y_val.size
     w_hist = [unflatten(w)]
     train_hist = [g_flat(w,a_train,s_train)]
         
@@ -56,4 +56,4 @@ def gradient_descent(g,w,a_train,s_train,alpha,max_its,verbose):
 
     if verbose == True:
         print ('finished all ' + str(max_its) + ' steps')
-    return w_hist,train_hist,val_hist
+    return w_hist,train_hist #,val_hist
